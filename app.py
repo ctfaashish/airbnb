@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Load your models
 models = {
     'model1': pickle.load(open('gradient_boosting_model.pkl', 'rb')),
-    'model2': pickle.load(open('label_encoders.pkl', 'rb'))  # Assuming you have this file
+    'model2': pickle.load(open('label_encoders.pkl', 'rb')) 
 }
 
 @app.route('/predict', methods=['POST'])
@@ -24,8 +24,6 @@ def predict():
 
     model = models[model_name]
 
-    # Replace this with your actual model prediction logic
-    # For demonstration purposes, just returning a dummy response
     prediction = f"Prediction for user {user_id} using {model_name}"
     return jsonify({'result': prediction})
 
