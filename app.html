@@ -59,10 +59,10 @@
             }
 
             // Fetch the prediction from the backend
-            fetch('https://airbnb2-c8bc29bbe37a.herokuapp.com/ ', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ model: selectedModel, user_id: userId })
+            // fetch('https://airbnb2-c8bc29bbe37a.herokuapp.com/ ', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ model: selectedModel, user_id: userId })
             })
             .then(response => response.json())
             .then(data => {
